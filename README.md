@@ -9,5 +9,5 @@ Ejercicios de la asignatura Programación de **1º DAM (Desarrollo de Aplicacion
 
 ## Bibliografía
 
-<img width=320px" src="/imagenes/java.jpg">
+<img width="320px" src="/imagenes/java.jpg">
 
