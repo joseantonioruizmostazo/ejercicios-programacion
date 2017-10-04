@@ -3,11 +3,11 @@ Ejercicios de la asignatura Programación de **1º DAM (Desarrollo de Aplicacion
 
 ## ¿Qué se aprende en Programación?
 
-* Comandos de linux
-* Git y GitHub
-* Lenguaje Java: variables, bucles, POO, etc.
+* Comandos de linux :penguin:
+* Git y GitHub  :octocat:
+* Lenguaje Java :coffee: : variables, bucles, POO, etc.
 
-## Bibliografía
+##  :books:Bibliografía
 
 <img width="320px" src="/imagenes/java.jpg">
 
@@ -15,6 +15,8 @@ Ejercicios de la asignatura Programación de **1º DAM (Desarrollo de Aplicacion
 
 ## Enlaces de interés
 
-*[Página oficial del IES Campanillas](http://iescampanillas.com/)
+* [Página oficial del IES Campanillas](http://iescampanillas.com/)
 
-*[Guía de la asignatura Programación](http://github.com/LuisJoseSanchez/programacion)
+* [Guía de la asignatura Programación](http://github.com/LuisJoseSanchez/programacion)
+
+ 
