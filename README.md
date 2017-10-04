@@ -18,9 +18,10 @@ A continuación se muestra el programa "Hola Mundo" escrito en lenguaje Java:
 
 public class HolaMundo { // Clase principal
 	public static void main(String[] args) {
+	System.out.println("¡Hola Mundo!");
 
-
-		System.out.println("¡Hola Mundo!");
+	}
+}
 ```
 Para compilar el programa teclea:
 
