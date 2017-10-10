@@ -36,7 +36,7 @@ java HolaMundo
 
 ##  :books: Bibliografía
 
-<img width="320px" src="/imagenes/java.jpg">
+<img width="320px" src="/imagenes/aprendejava600x776.jpg">
 
 [Aprende Java con Ejercicios](https://leanpub.com/aprendejava)
 
