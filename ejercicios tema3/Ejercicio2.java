@@ -7,6 +7,9 @@
 public class Ejercicio2 {
   public static void main(String[] args) {
     
+    String linea;
+    
+    
     System.out.print("Introduce una cantidad en euros que quieras convertir a pesetas: ");
     double euros = Double.parseDouble(System.console().readLine());
 
