@@ -14,25 +14,22 @@ public class Ejercicio13 {
     
     System.out.println("Ordenar 3 números de menor a mayor.\n");
     System.out.println("Por favor, introduzca cada número y pulse INTRO:");
-    double a = Double.parseDouble(System.console().readLine());
-    double b = Double.parseDouble(System.console().readLine());
-    double c = Double.parseDouble(System.console().readLine());
+    double a = Double.parseDouble(s.nextLine());
+    double b = Double.parseDouble(s.nextLine());
+    double c = Double.parseDouble(s.nextLine());
 
-    // ordenación de los dos primeros números
     if (a > b) {
       aux = a;
       a = b;
       b = aux;
     }
     
-    // ordenación de los dos últimos números
     if (b > c) {
       aux = b;
       b = c;
       c = aux;
     }
     
-    // se vuelven a ordenar los dos primeros
     if (a > b) {
       aux = a;
       a = b;
