@@ -11,34 +11,54 @@ public class Ejercicio15 {
     
     Scanner s = new Scanner(System.in);
     
-    String respuesta;
     
     System.out.println("Pirámide con caractéres con el vértice mirando en 4 posiciones\n");
-    System.out.println("Inserta una letra, número o caracter\n");
-    
+    System.out.println("Inserta una letra, número o caracter para utilizar como relleno de la pirámide\n");
+    String r = (s.nextLine());
     System.out.println("¿Hacia dónde quieres que mire el vértice de una pirámide?");
-    System.out.println("a) Hacia arriba\nb) Hacia abajo\nc) Hacia la izquierda\nd) Hacia la derecha"); 
+    System.out.println("1) Hacia arriba\n2) Hacia abajo\n3) Hacia la izquierda\n4) Hacia la derecha"); 
     System.out.print("=> ");
-    respuesta = (s.nextLine());
+    int respuesta = Integer.parseInt(s.nextLine());
     
       
     switch(respuesta) {
       case 1:
-        
+        System.out.println("    " + r + "    ");
+        System.out.println("   " + r + r + r + "   ");
+        System.out.println("  " + r + r + r + r + r + "  ");
+        System.out.println(" " + r + r + r + r + r + r + r + " ");
+        System.out.println(r + r + r + r + r + r + r + r + r);
         break;
       case 2:
-        
+        System.out.println(r + r + r + r + r + r + r + r + r);
+        System.out.println(" " + r + r + r + r + r + r + r + " ");
+        System.out.println("  " + r + r + r + r + r + "  ");
+        System.out.println("   " + r + r + r + "   ");
+        System.out.println("    " + r + "    ");
         break;
       case 3:
+        System.out.println("        " + r);
+        System.out.println("       " + r + r);
+        System.out.println("      " + r + r + r);
+        System.out.println("     " + r + r + r + r);
+        System.out.println("    " + r + r + r + r + r);
+        System.out.println("     " + r + r + r + r);
+        System.out.println("      " + r + r + r);
+        System.out.println("       " + r + r);
+        System.out.println("        " + r);
         break;
       case 4:
-        break:
+        System.out.println(r + "        ");
+        System.out.println(r + r + "       ");
+        System.out.println(r + r + r + "      ");
+        System.out.println(r + r + r + r + "     ");
+        System.out.println(r + r + r + r + r + "    ");
+        System.out.println(r + r + r + r + "     ");
+        System.out.println(r + r + r + "      ");
+        System.out.println(r + r + "       ");
+        System.out.println(r + "        ");
+        break;
         default:
-    
-    System.out.println("    *    ");
-    System.out.println("   ***   ");
-    System.out.println("  *****  ");
-    System.out.println(" ******* ");
-    System.out.println("*********");
+    }
   }
 }
