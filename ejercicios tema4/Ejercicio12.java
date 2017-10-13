@@ -58,6 +58,45 @@ int puntos = 0;
       puntos++;
     }
     
+    System.out.println("6. Double se utiliza para números:");
+    System.out.println("a) Primos\nb) Decimales\nc) Enteros"); 
+    System.out.print("=> ");
+    respuesta = (s.nextLine());  
+    if (respuesta.equals("b")) {
+      puntos++;
+    }
+    
+    System.out.println("7. ¿Cuáles son los tipos de medidas preventivas?");
+    System.out.println("a) Colectivas e individuales\nb) Permisivas y prohibitivas\nc) flamables e inflamables"); 
+    System.out.print("=> ");
+    respuesta = (s.nextLine());  
+    if (respuesta.equals("a")) {
+      puntos++;
+    }
+    
+    System.out.println("8. ¿Cuál es la responsabilidad del empresario, en cuanto a medidas preventivas?");
+    System.out.println("a) Pasearse por la oficina\nb) Formar e informar a los trabajadores\nc) Procurar que no se cumplan"); 
+    System.out.print("=> ");
+    respuesta = (s.nextLine());  
+    if (respuesta.equals("b")) {
+      puntos++;
+    }
+    
+    System.out.println("9. ¿Cuántos tipos de esquemas existen?");
+    System.out.println("a) Externo, interno y medio\nb) Conceptual, interno y periférico\nc) Externo, interno y conceptual"); 
+    System.out.print("=> ");
+    respuesta = (s.nextLine());  
+    if (respuesta.equals("c")) {
+      puntos++;
+    }
+    System.out.println("10. ¿Qué puntuación crees que sacarás en este cuestionario?");
+    System.out.println("a) Debido a esta pregunta ya no lo sé...\nb) Un ¡10!\nc) Si fallo esta pregunta solo creo que un 9"); 
+    System.out.print("=> ");
+    respuesta = (s.nextLine());  
+    if (respuesta.equals("b")) {
+      puntos++;
+    }
+    
     System.out.println("\nHa obtenido " + puntos + " puntos.");
     
   }
