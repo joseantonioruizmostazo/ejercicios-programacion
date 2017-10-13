@@ -24,6 +24,7 @@ public class Ejercicio14 {
       System.out.println(" y divisible entre 5.");
     } else {
       System.out.println(" y no es divisible entre 5.");
+      
     }
   }
 }

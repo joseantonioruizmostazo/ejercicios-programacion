@@ -59,5 +59,6 @@ int puntos = 0;
     }
     
     System.out.println("\nHa obtenido " + puntos + " puntos.");
+    
   }
 }

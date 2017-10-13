@@ -36,6 +36,7 @@ public class Ejercicio13 {
       b = aux;
     }
         
-    System.out.println("Los números introducidos ordenados de menor a mayor son " + a + ", " + b + " y " + c + "."); 
+    System.out.println("Los números introducidos ordenados de menor a mayor son " + a + ", " + b + " y " + c + ".");
+    
   }
 }
