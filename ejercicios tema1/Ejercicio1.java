@@ -1,5 +1,7 @@
-/**
+ /**
  * Tema 1, ejercicio 1
+ * 
+ * Escribe una programa que muestre tu nombre por pantalla.
  * 
  * @author José Ruiz
  */

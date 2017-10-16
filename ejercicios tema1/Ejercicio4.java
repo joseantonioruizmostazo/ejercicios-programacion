@@ -1,5 +1,7 @@
-/**
+ /**
  * Tema 1, ejercicio 4
+ * 
+ * Escribe un programa que muestre tu horario de clase.
  * 
  * @author José Ruiz
  */

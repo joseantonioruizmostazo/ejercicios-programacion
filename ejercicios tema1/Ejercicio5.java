@@ -1,5 +1,8 @@
-/**
+ /**
  * Tema 1, ejercicio 5
+ * 
+ * Modifica el programa anterior añadiendo colores. Puedes mostrar cada asig-
+ * natura de un color diferente.
  * 
  * @author José Ruiz
  */
