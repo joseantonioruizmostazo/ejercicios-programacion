@@ -21,8 +21,8 @@ public class Ejercicio6 {
     System.out.println("Tiempo en caer un objeto desde una altura\n");
     System.out.print("Por favor, introduce la altura (en metros) desde la que cae el objeto: ");
     double h = Double.parseDouble(s.nextLine());
-    double t = ((2 * h) / g) * ((2 * h) / g);
-    System.out.println("El tiempo que tardará en caer será de " + t + " segundos");
+    double t = Math.sqrt((2 * h) / g);
+    System.out.printf("El tiempo que tardará en caer el objeto desde %dm es de %.2fs.", (int)h, t);
     
   }
 }

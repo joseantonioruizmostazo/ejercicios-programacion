@@ -17,9 +17,9 @@ public class Ejercicio7 {
     System.out.println("Nota media de 3 notas\n");
     System.out.print("Por favor, introduce la primera nota: ");
     double nota1 = Double.parseDouble(s.nextLine());
-    System.out.print("Por favor, introduce la primera nota: ");
+    System.out.print("Por favor, introduce la segunda nota: ");
     double nota2 = Double.parseDouble(s.nextLine());
-    System.out.print("Por favor, introduce la primera nota: ");
+    System.out.print("Por favor, introduce la tercera nota: ");
     double nota3 = Double.parseDouble(s.nextLine());
     double media = (nota1 + nota2 + nota3) / 3;
     System.out.printf("La media es %.1f\n", media);
