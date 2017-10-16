@@ -1,6 +1,8 @@
 /**
  * Tema 3, ejercicio 10
  * 
+ * Realiza un conversor de Mb a Kb.
+ * 
  * @author José Ruiz
  */
  

@@ -1,6 +1,8 @@
 /**
  * Tema 3, ejercicio 5
  * 
+ * Escribe un programa que calcule el área de un rectángulo.
+ * 
  * @author José Ruiz
  */
  

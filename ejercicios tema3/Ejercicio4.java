@@ -1,6 +1,9 @@
 /**
  * Tema 3, ejercicio 4
  * 
+ * Escribe un programa que sume, reste, multiplique y divida dos números
+ * introducidos por teclado.
+ * 
  * @author José Ruiz
  */
  

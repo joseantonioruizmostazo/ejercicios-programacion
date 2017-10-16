@@ -1,8 +1,11 @@
-/**
-* Tema 3, ejercicio 7
-*
-* @author José Ruiz
-*/
+ /**
+ * Tema 3, ejercicio 7
+ * 
+ * Escribe un programa que calcule el total de una factura a partir de la base
+ * imponible.
+ * 
+ * @author José Ruiz
+ */
 
 import java.util.Scanner;
 

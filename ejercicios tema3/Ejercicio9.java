@@ -1,6 +1,9 @@
 /**
  * Tema 3, ejercicio 9
  * 
+ * Escribe un programa que calcule el volumen de un cono según la
+ * fórmula V = (1/3)πr^2h
+ * 
  * @author José Ruiz
  */
  

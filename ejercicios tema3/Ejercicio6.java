@@ -1,6 +1,8 @@
 /**
  * Tema 3, ejercicio 6
  * 
+ * Escribe un programa que calcule el área de un triángulo.
+ * 
  * @author José Ruiz
  */
  
