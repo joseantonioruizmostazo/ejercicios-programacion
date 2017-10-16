@@ -1,8 +1,11 @@
-/**
-* Tema 2, ejercicio 4
-*
-* @author José Ruiz
-*/
+ /**
+ * Tema 2, ejercicio 4
+ * 
+ * Realiza un conversor de euros a pesetas. La cantidad en euros que se quiere
+ * convertir deberá estar almacenada en una variable.
+ * 
+ * @author José Ruiz
+ */
 
 public class Ejercicio4 {
   public static void main(String[] args) {

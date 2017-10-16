@@ -1,8 +1,12 @@
-/**
-* Tema 2, ejercicio 1
-*
-* @author José Ruiz
-*/
+ /**
+ * Tema 2, ejercicio 1
+ * 
+ * Escribe un programa en el que se declaren las variables enteras x e y . Asignales
+ * los valores 144 y 999 respectivamente. A continuación, muestra por pantalla
+ * el valor de cada variable, la suma, la resta, la división y la multiplicación.
+ * 
+ * @author José Ruiz
+ */
 
 public class Ejercicio1 {
   public static void main(String[] args) {

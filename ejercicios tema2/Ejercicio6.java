@@ -1,8 +1,12 @@
-/**
-* Tema 2, ejercicio 6
-*
-* @author José Ruiz
-*/
+ /**
+ * Tema 2, ejercicio 6
+ * 
+ * Escribe un programa que calcule el total de una factura a partir de la base
+ * imponible (precio sin IVA). La base imponible estará almacenada en una
+ * variable.
+ * 
+ * @author José Ruiz
+ */
 
 public class Ejercicio6 {
   public static void main(String[] args) {
