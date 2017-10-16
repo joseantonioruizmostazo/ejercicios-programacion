@@ -1,6 +1,8 @@
 /**
  * Tema 4, ejercicio 7
  * 
+ * Realiza un programa que calcule la media de tres notas.
+ * 
  * @author José Ruiz
  */
  

@@ -1,6 +1,9 @@
 /**
  * Tema 4, ejercicio 13
  * 
+ * Escribe un programa que ordene tres números enteros introducidos por
+ * teclado.
+ * 
  * @author José Ruiz
  */
  

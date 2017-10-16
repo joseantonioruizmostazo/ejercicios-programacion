@@ -1,6 +1,10 @@
 /**
  * Tema 4, ejercicio 6
  * 
+ * Realiza un programa que calcule el tiempo que tardará en caer un
+ * objeto desde una altura h.
+ * t = raiz(2h/g) siendo g = 9.81 m/s2
+ * 
  * @author José Ruiz
  */
  

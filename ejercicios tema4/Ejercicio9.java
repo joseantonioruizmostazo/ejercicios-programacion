@@ -1,6 +1,9 @@
 /**
  * Tema 4, ejercicio 9
  * 
+ * Realiza un programa que resuelva una ecuación de segundo grado (del tipo
+ * ax 2 + bx + c = 0).
+ * 
  * @author José Ruiz
  */
  
