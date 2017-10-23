@@ -24,7 +24,7 @@ public class Ejercicio10 {
     System.out.println("cuando introduzca un número negativo se dará por finalizada\nla petición de números.\n");
     
     while (numeroIntroducido >= 0) {
-      numeroIntroducido = Double.parseDouble(System.console().readLine());
+      numeroIntroducido = Double.parseDouble(s.nextLine());
       totalNumeros++;
       suma += numeroIntroducido;
     }
