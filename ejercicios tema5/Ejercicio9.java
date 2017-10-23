@@ -21,9 +21,13 @@ public class Ejercicio9 {
     System.out.println("Por favor, introduzca un número y te diré cuantos dígitos tiene.\n");
     numeroIntroducido = Integer.parseInt(s.nextLine());
     
+    if (numeroIntroducido < 0) {
+      numeroIntroducido = (numeroIntroducido * -1);
+    }
+    
     n = numeroIntroducido;
     
-    while (n > 10) {
+    while (n > 9) {
       n /= 10;
       numeroDeDigitos++;
     }

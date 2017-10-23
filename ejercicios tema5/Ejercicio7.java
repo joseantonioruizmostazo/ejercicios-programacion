@@ -31,14 +31,15 @@ public class Ejercicio7 {
         acertado = true;
       } else {
         System.out.println("Lo siento, la clave es incorrecta\n");
+        intentos--;
+        if (intentos == 1) {
+          System.out.println("Le queda " + intentos + " intento.");
+          } else {
+          System.out.println("Le quedan " + intentos + " intentos");
+          }
       }
       
-      intentos--;
-        if (intentos == 1) {
-        System.out.println("Le queda " + intentos + " intento.");
-        } else {
-        System.out.println("Le quedan " + intentos + " intentos");
-        }
+      
 
     } while((intentos > 0) && (!acertado));
     
