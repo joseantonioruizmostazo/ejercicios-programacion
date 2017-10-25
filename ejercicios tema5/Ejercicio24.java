@@ -19,9 +19,6 @@ public class Ejercicio24 {
     
     Scanner s = new Scanner(System.in);
     
-    
-    //System.out.print("Por favor, introduzca un número: ");
-    //int n = Integer.parseInt(s.nextLine());
     System.out.print("Por favor, introduzca la altura de la pirámide: ");
     int alturaIntroducida = Integer.parseInt(s.nextLine());
     
