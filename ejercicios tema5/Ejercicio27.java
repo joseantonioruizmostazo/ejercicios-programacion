@@ -19,7 +19,7 @@ public class Ejercicio27 {
     
     System.out.print("A continuación se mostrarán, se contarán y se sumarán todos los múltiplos\nde 3 que haya entre 1 y el número que introduzca a continuación\n");
     
-    System.out.print("Por favor, introduzca un número mayor que 1: ");
+    System.out.print("Por favor, introduzca un entero mayor que 1: ");
     int numeroIntroducido = Integer.parseInt(s.nextLine());
     
     for (int i = 1; i < numeroIntroducido; i++) {
