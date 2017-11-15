@@ -44,7 +44,7 @@ public class Ejercicio6 {
           System.out.println("Lo siento, no es correcto");
           oportunidades--;
           System.out.println("Te quedan: " + oportunidades + " oportunidades.");
-        }
+      }
       //Si el número oculto es menor que el introducido se lo dirá como pista.
       if ((numeroIntroducido > numeroOculto) && (oportunidades > 0)) {
         System.out.println("El número es menor, prueba otra vez");
@@ -61,6 +61,6 @@ public class Ejercicio6 {
       } else { 
           System.out.println("Se acabó el juego, gracias por jugar.\n");
           System.out.println("El número oculto era: " + numeroOculto);
-        }
+      }
   }
 }

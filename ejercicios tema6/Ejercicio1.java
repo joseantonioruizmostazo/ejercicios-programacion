@@ -6,13 +6,10 @@
  * 
  * @author José Ruiz
  */
- 
- import java.util.Scanner;
 
 public class Ejercicio1 {
   public static void main(String[] args) {
     
-    Scanner s = new Scanner(System.in);
     int dado;
     int suma = 0;
     

@@ -10,13 +10,10 @@
  * 
  * @author José Ruiz
  */
- 
- import java.util.Scanner;
 
 public class Ejercicio2 {
   public static void main(String[] args) {
     
-    Scanner s = new Scanner(System.in);
     
     String palo = "";
     
@@ -41,7 +38,7 @@ public class Ejercicio2 {
         
     }
     
-    int numeroCarta = (int)(Math.random() * 12) + 1;
+    int numeroCarta = (int)(Math.random() * 13) + 1;
     String carta = "";
     switch(numeroCarta) {
         case 1:

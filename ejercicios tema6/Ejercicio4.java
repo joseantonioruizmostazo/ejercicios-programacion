@@ -6,13 +6,9 @@
  * 
  * @author José Ruiz
  */
- 
- import java.util.Scanner;
 
 public class Ejercicio4 {
   public static void main(String[] args) {
-    
-    Scanner s = new Scanner(System.in);
     
     System.out.print("A continuación se mostrarán 20 números enteros aleatorios entre 0 y 10 (ambos incluidos)\n");
     
