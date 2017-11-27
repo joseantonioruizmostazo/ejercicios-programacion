@@ -1,4 +1,4 @@
-/*
+/**
  * Tema 7, ejercicio 2
  * 
  * Define un array de 10 caracteres con nombre simbolo y asigna valores a los

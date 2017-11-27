@@ -1,4 +1,4 @@
-/*
+/**
  * Tema 7, ejercicio 1
  * 
  * Define un array de 12 números enteros con nombre num y asigna los valores
