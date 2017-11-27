@@ -92,11 +92,8 @@ public class Ejercicio18 {
           break;
         default:
       }
-      
       System.out.println("Dormitorio uno: " + colorUno);
       System.out.println("Dormitorio dos: " + colorDos);
       System.out.println("Dormitorio tres: " + colorTres);
-      
-    
   }
 }
