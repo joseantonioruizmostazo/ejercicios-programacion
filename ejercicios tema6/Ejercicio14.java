@@ -9,7 +9,6 @@
  * 
  * @author José Ruiz
  */
-package ejercicios.tema6;
 
 import java.util.Scanner;
 

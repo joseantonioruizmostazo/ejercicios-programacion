@@ -10,7 +10,7 @@
  * 
  * @author José Ruiz
  */
-package ejercicios.tema6;
+
 
 public class Ejercicio18 {
   public static void main(String[] args) {

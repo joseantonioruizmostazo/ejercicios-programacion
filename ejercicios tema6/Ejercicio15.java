@@ -25,7 +25,6 @@
  * 
  * @author José Ruiz
  */
-package ejercicios.tema6;
 
 public class Ejercicio15 {
   public static void main(String[] args) {
