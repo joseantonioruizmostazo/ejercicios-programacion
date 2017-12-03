@@ -24,13 +24,13 @@ public class Ejercicio7 {
     System.out.println("primer valor por el segundo.\n");
     
     //se declara el array
-    int[] numeros = new int[30];
+    int[] numeros = new int[100];
     //se recogen en el array 100 numeros aleatorios entre 0 y 20
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 100; i++) {
       numeros [i] = (int)(Math.random() * 21);
     }
     //se muestran los 100 numeros
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 100; i++) {
       System.out.print("[ " + numeros [i]  + " ]");
     }
     
@@ -44,7 +44,7 @@ public class Ejercicio7 {
     int sustituto = Integer.parseInt(s.nextLine());
     
     //se muestran de nuevo los 100 numeros
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 100; i++) {
       if (numeros [i] == sustituido) {
       numeros [i] = sustituto;
       System.out.print("[\"" + numeros [i]  + "\"]");
