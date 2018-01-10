@@ -35,9 +35,15 @@ import static ejercicios.tema8.matematicas.Varios.digitos;
 import static ejercicios.tema8.matematicas.Varios.digitoN;
 import static ejercicios.tema8.matematicas.Varios.esCapicua;
 import static ejercicios.tema8.matematicas.Varios.esPrimo;
+import static ejercicios.tema8.matematicas.Varios.juntaNumeros;
+import static ejercicios.tema8.matematicas.Varios.pegaPorDelante;
+import static ejercicios.tema8.matematicas.Varios.pegaPorDetras;
 import static ejercicios.tema8.matematicas.Varios.posicionDeDigito;
 import static ejercicios.tema8.matematicas.Varios.potencia;
+import static ejercicios.tema8.matematicas.Varios.quitaPorDelante;
+import static ejercicios.tema8.matematicas.Varios.quitaPorDetras;
 import static ejercicios.tema8.matematicas.Varios.siguientePrimo;
+import static ejercicios.tema8.matematicas.Varios.trozoDeNumero;
 import static ejercicios.tema8.matematicas.Varios.volteado;
 
 public class Ejercicios1a14 {
@@ -90,7 +96,46 @@ public class Ejercicios1a14 {
       //dentro de un número entero. Si no se encuentra, devuelve -1.
       System.out.print("Introduzca el dígito del que desea mostrar la posición en el número anteriormente introducido: ");
       int digito = Integer.parseInt(s.nextLine());
-      System.out.println("La posición del dígito elegido es: " + posicionDeDigito(numeroIntroducido, posicion));
+      System.out.println("La posición del dígito elegido es: " + posicionDeDigito(numeroIntroducido, digito));
+      System.out.println();
+      
+      //9. quitaPorDetras: Le quita a un número n dígitos por detrás (por la derecha).
+      System.out.print("Introduzca el número de dígitos que desea quitarle (por la derecha) al número anteriormente introducido: ");
+      int quitaDetras = Integer.parseInt(s.nextLine());
+      System.out.println("Le ha quitado " + quitaDetras + " dígitos al número " + numeroIntroducido + " y el número que le queda es: " + quitaPorDetras(numeroIntroducido, quitaDetras));
+      System.out.println();
+      
+      //10. quitaPorDelante: Le quita a un número n dígitos por delante (por la izquierda).
+      System.out.print("Introduzca el número de dígitos que desea quitarle (por la izquierda) al número anteriormente introducido: ");
+      int quitaDelante = Integer.parseInt(s.nextLine());
+      System.out.println("Le ha quitado " + quitaDelante + " dígitos al número " + numeroIntroducido + " y el número que le queda es: " + quitaPorDelante(numeroIntroducido, quitaDelante));
+      System.out.println();
+      
+      //11. pegaPorDetras: Añade un dígito a un número por detrás(por la derecha).
+      System.out.print("Introduzca el dígito que desea pegarle por detrás (por la derecha) al número anteriormente introducido: ");
+      int pegaDetras = Integer.parseInt(s.nextLine());
+      System.out.println("Ha añadido el dígito " + pegaDetras + " al número " + numeroIntroducido + " y el número que le queda es: " + pegaPorDetras(numeroIntroducido, pegaDetras));
+      System.out.println();
+      
+      //12. pegaPorDelante: Añade un dígito a un número por delante.
+      System.out.print("Introduzca el dígito que desea pegarle por delante (por la izquierda) al número anteriormente introducido: ");
+      int pegaDelante = Integer.parseInt(s.nextLine());
+      System.out.println("Ha añadido el dígito " + pegaDelante + " al número " + numeroIntroducido + " y el número que le queda es: " + pegaPorDelante(numeroIntroducido, pegaDelante));
+      System.out.println();
+      
+      //13. trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro de un número
+      //y devuelve el trozo correspondiente.
+      System.out.print("Introduzca el inicio del trozo del número: ");
+      int inicioTrozo = Integer.parseInt(s.nextLine());
+      System.out.print("Introduzca el final del trozo del número: ");
+      int finTrozo = Integer.parseInt(s.nextLine());
+      System.out.println("Al número " + numeroIntroducido + " le has cogido el trozo que va desde la posición " + inicioTrozo + " a la posición " + finTrozo + " quedando el número: " + trozoDeNumero(numeroIntroducido, inicioTrozo, finTrozo));
+      System.out.println();
+      
+      //14. juntaNumeros: Pega dos números para formar uno.
+      System.out.print("Introduzca el número que desea juntar al número anteriormente introducido: ");
+      int pegaNumero = Integer.parseInt(s.nextLine());
+      System.out.println("Si cogemos el primer número introducido " + numeroIntroducido + " y el segundo número introducido " + pegaNumero + " y los juntamos nos queda: " + juntaNumeros(numeroIntroducido, pegaNumero));
       System.out.println();
     } 
 }

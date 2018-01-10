@@ -152,26 +152,115 @@ public class Varios {
   
   public static int posicionDeDigito(int numeroIntroducido, int digito) {
     int longitud = 0;
-    int posicion = -3;
-    int volteado = 0;
-    //Si el numero es igual a 0, la longitud será de 1.
-    if (numeroIntroducido == 0) {
-      longitud = 1;
-    }
-    
-    //Para voltear el número y además averiguar su longitud.
-    while (numeroIntroducido > 0) {
-      volteado = (numeroIntroducido % 10) + (volteado * 10);
-      numeroIntroducido /= 10;
-      longitud++;
-    }
+    int posicion = 0;
+    int numVolteado = volteado(numeroIntroducido);
+    int posicionDigito = -1;
+
     //Comprueba la posición
-    while (volteado > 0) {
-      if ((volteado % 10) == digito) {
+    while (numVolteado > 0) {
+      if ((numVolteado % 10) == digito) {
+        posicionDigito = posicion;
       }
-      volteado /= 10;
+      numVolteado /= 10;
       posicion++;
     }
-    return posicion;
+    return posicionDigito;
   }
+    /**
+   * Le quita <code>n</code> números por detrás a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param quitaDetras es el número de dígitos que se desea quitar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  
+  public static int quitaPorDetras(int numeroIntroducido, int quitaDetras) {
+    
+    int nuevoNum;
+    int numDigitos = digitos(numeroIntroducido);
+    
+    if (numDigitos < quitaDetras) {
+      return -1;
+    }
+
+    while (quitaDetras != 0) {
+      numeroIntroducido /= 10;
+      quitaDetras--;
+    }
+    nuevoNum = numeroIntroducido;
+    return nuevoNum;
+  }
+  
+   /**
+   * Le quita <code>n</code> números por delante (por la izquierda) a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param quitaDelante es el número de dígitos que se desea quitar(por delante) al número introducido).
+   * @return  El número restante.
+   */
+  
+  public static int quitaPorDelante(int numeroIntroducido, int quitaDelante) {
+    
+    numeroIntroducido = volteado(numeroIntroducido);
+    int quitaVolteado = quitaPorDetras(numeroIntroducido, quitaDelante);
+    return volteado(quitaVolteado);
+  }
+  
+   /**
+   * Le añade un número por detrás a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaDetras es dígito que se desea pegar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  
+  public static int pegaPorDetras(int numeroIntroducido, int pegaDetras) {
+
+    return (numeroIntroducido * 10) + pegaDetras;
+    
+  }
+  
+   /**
+   * Le añade un número por delante a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaDelante es dígito que se desea pegar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  
+  public static int pegaPorDelante(int numeroIntroducido, int pegaDelante) {
+    int numDigitos = digitos(numeroIntroducido);
+    int potenciaPegaDelante = (int)potencia(10, numDigitos);
+    return numeroIntroducido + (pegaDelante * potenciaPegaDelante);
+  }
+  
+   /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param posicionInicial posicion inicial del número introducido).
+   * @param posicionFinal posicion final del número introducido).
+   * @return  El número restante.
+   */
+  
+  public static int trozoDeNumero(int numeroIntroducido, int inicio, int fin) {
+    int numDigitos = digitos(numeroIntroducido);
+    numeroIntroducido = quitaPorDelante(numeroIntroducido, inicio);
+    numeroIntroducido = quitaPorDetras(numeroIntroducido, numDigitos - fin - 1);
+    return numeroIntroducido;
+  }
+  
+  /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaNumero otro número entero introducido para pegarlo al anterior.
+   * @return  El número juntado.
+   */
+  
+  public static int juntaNumeros(int numeroIntroducido, int pegaNumero) {
+    return pegaPorDelante(numeroIntroducido, pegaNumero);
+  }
+  
+  
 }
