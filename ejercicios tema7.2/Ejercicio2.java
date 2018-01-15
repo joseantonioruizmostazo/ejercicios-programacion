@@ -1,5 +1,5 @@
 /**
- * Tema 7, ejercicio 2
+ * Tema 7.2, ejercicio 2
  * 
  * Escribe un programa que pida 20 números enteros. Estos números se deben
  * introducir en un array de 4 filas por 5 columnas. El programa mostrará las

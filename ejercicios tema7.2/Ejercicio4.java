@@ -1,5 +1,5 @@
 /**
- * Tema 7, ejercicio 4
+ * Tema 7.2, ejercicio 4
  * 
  * Modifica el programa anterior de tal forma que las sumas parciales y la suma
  * total aparezcan en la pantalla con un pequeño retardo, dando la impresión de

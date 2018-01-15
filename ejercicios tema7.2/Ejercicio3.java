@@ -1,5 +1,5 @@
 /**
- * Tema 7, ejercicio 3
+ * Tema 7.2, ejercicio 3
  * 
  * Modifica el programa anterior de tal forma que los números que se introducen
  * en el array se generen de forma aleatoria (valores entre 100 y 999).
