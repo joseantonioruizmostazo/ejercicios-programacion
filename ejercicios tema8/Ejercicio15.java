@@ -9,7 +9,6 @@
 package ejercicios.tema8;
 import java.util.Scanner;
 import ejercicios.tema8.matematicas.Varios;
-import static ejercicios.tema8.matematicas.Varios.esCapicua;
 
 public class Ejercicio15 {
 
