@@ -14,15 +14,37 @@ public class Varios {
    * @param x un número entero positivo
    * @return  número volteado
    */
-  public static int volteado(int x) {
+  public static long volteado(long x) {
     
-    int n = 0;
+    long n = 0;
     
     while (x > 0) {
       n = (x % 10) + (n * 10);
       x /= 10; 
     }
     return n;
+  }
+  
+  /**
+   * Le da la vuelta a un número entero positivo
+   * 
+   * @param x un número entero positivo
+   * @return  número volteado
+   */
+  public static int volteado(int x) {
+    
+    return (int)volteado((long) x);
+  }
+  
+  /**
+   * Comprueba si un número entero positivo es capicúa.
+   * 
+   * @param n un número entero positivo.
+   * @return  <code>true</code> si el número es capicúa o <code>false</code> en caso contrario.
+   */
+  public static boolean esCapicua(long n) {
+    
+    return (volteado(n) == n);
   }
   
   /**
@@ -33,11 +55,7 @@ public class Varios {
    */
   public static boolean esCapicua(int n) {
     
-    if (volteado(n) == n) {
-        return true;
-    } else {
-    return false;
-    }
+    return esCapicua((long) n);
   }
   
   /**
@@ -226,8 +244,8 @@ public class Varios {
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
-   * @param posicionInicial posicion inicial del número introducido).
-   * @param posicionFinal posicion final del número introducido).
+   * @param inicio posicion inicial del número introducido).
+   * @param fin posicion final del número introducido).
    * @return  El número restante.
    */
   public static int trozoDeNumero(int numeroIntroducido, int inicio, int fin) {
@@ -246,6 +264,30 @@ public class Varios {
    */
   public static int juntaNumeros(int pegaNumero, int numeroIntroducido) {
     return pegaPorDelante(numeroIntroducido, pegaNumero);
+  }
+  
+  /**
+   * Convierte un número binario en decimal.
+   * 
+   * @param numeroIntroducido un número binario compuesto por ceros y unos.
+   * @return  el número en decimal.
+   */
+  public static int bin2Dec(int numeroIntroducido) {
+    
+    int exponente = 1;
+    int base = 2;
+    int numDigitos = digitos(numeroIntroducido);
+    int numeroDecimal = 0;
+    
+    int numeroIntroducidoVolteado = volteado(numeroIntroducido * (10) + 7);//multiplico por 10 y le sumo un numero para que al voltearlo no me de error por si acaba en 0.
+    
+    while (numDigitos != 0){
+      
+      numeroDecimal += digitoN(numeroIntroducidoVolteado, exponente) * potencia(base, exponente -1);
+      exponente++;
+      numDigitos--;
+    }
+    return (numeroDecimal);
   }
   
   
