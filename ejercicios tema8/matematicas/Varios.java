@@ -64,15 +64,15 @@ public class Varios {
    * @return  <code>true</code> si el número es primo o <code>false</code> en caso contrario.
    */
   public static boolean esPrimo(long n) {
-  for (int i = 2; i < n; i++) {
-    if ((n % i) == 0) {
-        return false;
+    for (int i = 2; i < n; i++) {
+      if ((n % i) == 0) {
+          return false;
+      }
     }
-  }
-  return true;
+    return true;
   }
   
-    /**
+  /**
    * Comprueba si un número entero positivo es primo.
    * 
    * @param n un número entero positivo.
@@ -114,8 +114,8 @@ public class Varios {
    */
   public static long potencia(int base, int exponente) {
     
-  long potencia = 1;
-        
+    long potencia = 1;
+
     if (exponente == 0) {
       potencia = 1;
     }
@@ -160,7 +160,7 @@ public class Varios {
    * @return  número de dígitos de un numero
    */
   public static int digitos(int n) {
-      return (int)digitos((long) n);
+    return (int)digitos((long) n);
   }
   
   /**
@@ -180,7 +180,7 @@ public class Varios {
     return (int)numeroIntroducido % 10;
   }
   
-    /**
+  /**
    * A partir de un número introducido y una posición se debe mostrar el dígito de esa posición.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -216,7 +216,7 @@ public class Varios {
     return posicionDigito;
   }
   
-    /**
+  /**
    * A partir de un número introducido y un digito se debe mostrar la posición que ocupa.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -227,7 +227,7 @@ public class Varios {
     return posicionDeDigito((long)numeroIntroducido, digito);
   }
   
-    /**
+  /**
    * Le quita <code>n</code> números por detrás a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -251,7 +251,7 @@ public class Varios {
     return nuevoNum;
   }
   
-      /**
+  /**
    * Le quita <code>n</code> números por detrás a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -262,7 +262,7 @@ public class Varios {
     return (int)quitaPorDetras((long) numeroIntroducido, quitaDetras);
   }
   
-   /**
+  /**
    * Le quita <code>n</code> números por delante (por la izquierda) a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -276,7 +276,7 @@ public class Varios {
     return volteado(quitaVolteado);
   }
   
-     /**
+  /**
    * Le quita <code>n</code> números por delante (por la izquierda) a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -287,7 +287,7 @@ public class Varios {
     return (int)quitaPorDelante((long) numeroIntroducido, quitaDelante);
   }
   
-   /**
+  /**
    * Le añade un número por detrás a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -298,7 +298,7 @@ public class Varios {
     return (numeroIntroducido * 10) + pegaDetras;
   }
   
-     /**
+  /**
    * Le añade un número por detrás a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -309,7 +309,7 @@ public class Varios {
     return (int)pegaPorDetras((long) numeroIntroducido, pegaDetras);
   }
   
-   /**
+  /**
    * Le añade un número por delante a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -322,7 +322,7 @@ public class Varios {
     return numeroIntroducido + (pegaDelante * potenciaPegaDelante);
   }
   
-     /**
+  /**
    * Le añade un número por delante a un número introducido.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -333,7 +333,7 @@ public class Varios {
     return (int)pegaPorDelante((long) numeroIntroducido, pegaDelante);
   }
   
-   /**
+  /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -348,7 +348,7 @@ public class Varios {
     return numeroIntroducido;
   }
   
-     /**
+  /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -371,7 +371,7 @@ public class Varios {
     return pegaPorDelante(numeroIntroducido, (int)pegaNumero);
   }
   
-    /**
+  /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -382,7 +382,7 @@ public class Varios {
     return (int)juntaNumeros((long) pegaNumero, (long) numeroIntroducido);
   }
   
-    /**
+  /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -393,7 +393,7 @@ public class Varios {
     return juntaNumeros((long) pegaNumero, numeroIntroducido);
   }
   
-   /**
+  /**
    * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
    * 
    * @param numeroIntroducido un número entero positivo.
@@ -428,7 +428,7 @@ public class Varios {
     return (numeroDecimal);
   }
   
-    /**
+  /**
    * Convierte un número binario en decimal.
    * 
    * @param numeroIntroducido un número binario compuesto por ceros y unos.
@@ -438,11 +438,11 @@ public class Varios {
     return (int)bin2Dec((long) numeroIntroducido);
   }
   
-      /**
+  /**
    * Convierte un número decimal en binario.
    * 
    * @param numeroIntroducido un número en base decimal.
-   * @return  el número en binario.
+   * @return el número en binario.
    */
   public static long dec2Bin(long numeroIntroducido) {
     
@@ -457,9 +457,13 @@ public class Varios {
     return quitaPorDetras(volteadoBinario,1);
   }
   
-    public static int dec2Bin(int numeroIntroducido) {
+  /**
+   * Convierte un número decimal en binario.
+   * 
+   * @param numeroIntroducido un número en base decimal.
+   * @return el número en binario.
+   */
+  public static int dec2Bin(int numeroIntroducido) {
     return (int)dec2Bin((long) numeroIntroducido);
   }
-  
-  
 }
