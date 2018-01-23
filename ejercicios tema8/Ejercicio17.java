@@ -17,8 +17,7 @@ public class Ejercicio17 {
     Scanner s = new Scanner(System.in);
 
     System.out.println("Por favor introduzca un número para pasar de binario a decimal: \n");
-    int numeroIntroducido = Integer.parseInt(s.nextLine());
-    
+    long numeroIntroducido = Long.parseLong(s.nextLine());
     System.out.println("El número introducido (en formato binario) es: " + numeroIntroducido + " y convertido a decimal es: " + Varios.bin2Dec(numeroIntroducido));
   }
 }

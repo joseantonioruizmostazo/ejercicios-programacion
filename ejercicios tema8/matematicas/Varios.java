@@ -54,7 +54,6 @@ public class Varios {
    * @return  <code>true</code> si el número es capicúa o <code>false</code> en caso contrario.
    */
   public static boolean esCapicua(int n) {
-    
     return esCapicua((long) n);
   }
   
@@ -64,13 +63,36 @@ public class Varios {
    * @param n un número entero positivo.
    * @return  <code>true</code> si el número es primo o <code>false</code> en caso contrario.
    */
-  public static boolean esPrimo(int n) {
+  public static boolean esPrimo(long n) {
   for (int i = 2; i < n; i++) {
     if ((n % i) == 0) {
         return false;
     }
   }
   return true;
+  }
+  
+    /**
+   * Comprueba si un número entero positivo es primo.
+   * 
+   * @param n un número entero positivo.
+   * @return  <code>true</code> si el número es primo o <code>false</code> en caso contrario.
+   */
+  public static boolean esPrimo(int n) {
+    return esPrimo((long) n);
+  }
+  
+  /**
+   * A partir de un número introducido debe mostrarnos el número primo siguiente.
+   * 
+   * @param n un número entero positivo.
+   * @return  Siguiente número primo al introducido.
+   */
+  public static long siguientePrimo(long n) {
+    
+    while (!esPrimo(++n)) {
+    }
+    return n;
   }
   
   /**
@@ -80,10 +102,7 @@ public class Varios {
    * @return  Siguiente número primo al introducido.
    */
   public static int siguientePrimo(int n) {
-    
-    while (!esPrimo(++n)) {
-    }
-    return n;
+    return (int)siguientePrimo((long)n);
   }
   
   /**
@@ -115,12 +134,12 @@ public class Varios {
   }
   
   /**
-   * Le da la vuelta a un número entero positivo
+   * Cuenta los dígitos de un número
    * 
-   * @param x un número entero positivo
-   * @return  número volteado
+   * @param n un número entero positivo
+   * @return  número de dígitos de un numero
    */
-  public static int digitos(int n) {
+  public static int digitos(long n) {
     
     if (n == 0) {
       return 1;
@@ -132,7 +151,17 @@ public class Varios {
       }
       return x;
     }
-    }
+  }
+  
+  /**
+   * Cuenta los dígitos de un número
+   * 
+   * @param n un número entero positivo
+   * @return  número de dígitos de un numero
+   */
+  public static int digitos(int n) {
+      return (int)digitos((long) n);
+  }
   
   /**
    * A partir de un número introducido y una posición se debe mostrar el dígito de esa posición.
@@ -141,15 +170,25 @@ public class Varios {
    * @param posicion una posición en ese número (empezando desde 0 y contando de izquierda a derecha).
    * @return  El dígito de la posición elegida.
    */
-  public static int digitoN(int numeroIntroducido, int posicion) {
+  public static int digitoN(long numeroIntroducido, int posicion) {
     
     numeroIntroducido = volteado(numeroIntroducido);
 
     while (posicion-- > 0) {
       numeroIntroducido = numeroIntroducido / 10;
     }
-
     return (int)numeroIntroducido % 10;
+  }
+  
+    /**
+   * A partir de un número introducido y una posición se debe mostrar el dígito de esa posición.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param posicion una posición en ese número (empezando desde 0 y contando de izquierda a derecha).
+   * @return  El dígito de la posición elegida.
+   */
+  public static int digitoN(int numeroIntroducido, int posicion) {
+    return digitoN((long)numeroIntroducido, posicion);
   }
   
   
@@ -160,10 +199,10 @@ public class Varios {
    * @param digito una posición en ese número (empezando desde 0 y contando de izquierda a derecha).
    * @return  El dígito de la posición elegida.
    */
-  public static int posicionDeDigito(int numeroIntroducido, int digito) {
+  public static int posicionDeDigito(long numeroIntroducido, int digito) {
     int longitud = 0;
     int posicion = 0;
-    int numVolteado = volteado(numeroIntroducido);
+    long numVolteado = volteado(numeroIntroducido);
     int posicionDigito = -1;
 
     //Comprueba la posición
@@ -176,6 +215,18 @@ public class Varios {
     }
     return posicionDigito;
   }
+  
+    /**
+   * A partir de un número introducido y un digito se debe mostrar la posición que ocupa.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param digito una posición en ese número (empezando desde 0 y contando de izquierda a derecha).
+   * @return  El dígito de la posición elegida.
+   */
+  public static int posicionDeDigito(int numeroIntroducido, int digito) {
+    return posicionDeDigito((long)numeroIntroducido, digito);
+  }
+  
     /**
    * Le quita <code>n</code> números por detrás a un número introducido.
    * 
@@ -183,10 +234,10 @@ public class Varios {
    * @param quitaDetras es el número de dígitos que se desea quitar(por detrás) al número introducido).
    * @return  El número restante.
    */
-  public static int quitaPorDetras(int numeroIntroducido, int quitaDetras) {
+  public static long quitaPorDetras(long numeroIntroducido, int quitaDetras) {
     
-    int nuevoNum;
-    int numDigitos = digitos(numeroIntroducido);
+    long nuevoNum;
+    long numDigitos = digitos(numeroIntroducido);
     
     if (numDigitos < quitaDetras) {
       return -1;
@@ -200,6 +251,17 @@ public class Varios {
     return nuevoNum;
   }
   
+      /**
+   * Le quita <code>n</code> números por detrás a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param quitaDetras es el número de dígitos que se desea quitar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  public static int quitaPorDetras(int numeroIntroducido, int quitaDetras) {
+    return (int)quitaPorDetras((long) numeroIntroducido, quitaDetras);
+  }
+  
    /**
    * Le quita <code>n</code> números por delante (por la izquierda) a un número introducido.
    * 
@@ -207,11 +269,22 @@ public class Varios {
    * @param quitaDelante es el número de dígitos que se desea quitar(por delante) al número introducido).
    * @return  El número restante.
    */
-  public static int quitaPorDelante(int numeroIntroducido, int quitaDelante) {
+  public static long quitaPorDelante(long numeroIntroducido, int quitaDelante) {
     
     numeroIntroducido = volteado(numeroIntroducido);
-    int quitaVolteado = quitaPorDetras(numeroIntroducido, quitaDelante);
+    long quitaVolteado = quitaPorDetras(numeroIntroducido, quitaDelante);
     return volteado(quitaVolteado);
+  }
+  
+     /**
+   * Le quita <code>n</code> números por delante (por la izquierda) a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param quitaDelante es el número de dígitos que se desea quitar(por delante) al número introducido).
+   * @return  El número restante.
+   */
+  public static int quitaPorDelante(int numeroIntroducido, int quitaDelante) {
+    return (int)quitaPorDelante((long) numeroIntroducido, quitaDelante);
   }
   
    /**
@@ -221,10 +294,19 @@ public class Varios {
    * @param pegaDetras es dígito que se desea pegar(por detrás) al número introducido).
    * @return  El número restante.
    */
-  public static int pegaPorDetras(int numeroIntroducido, int pegaDetras) {
-
+  public static long pegaPorDetras(long numeroIntroducido, int pegaDetras) {
     return (numeroIntroducido * 10) + pegaDetras;
-    
+  }
+  
+     /**
+   * Le añade un número por detrás a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaDetras es dígito que se desea pegar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  public static int pegaPorDetras(int numeroIntroducido, int pegaDetras) {
+    return (int)pegaPorDetras((long) numeroIntroducido, pegaDetras);
   }
   
    /**
@@ -234,10 +316,21 @@ public class Varios {
    * @param pegaDelante es dígito que se desea pegar(por detrás) al número introducido).
    * @return  El número restante.
    */
-  public static int pegaPorDelante(int numeroIntroducido, int pegaDelante) {
+  public static long pegaPorDelante(long numeroIntroducido, int pegaDelante) {
     int numDigitos = digitos(numeroIntroducido);
     int potenciaPegaDelante = (int)potencia(10, numDigitos);
     return numeroIntroducido + (pegaDelante * potenciaPegaDelante);
+  }
+  
+     /**
+   * Le añade un número por delante a un número introducido.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaDelante es dígito que se desea pegar(por detrás) al número introducido).
+   * @return  El número restante.
+   */
+  public static int pegaPorDelante(int numeroIntroducido, int pegaDelante) {
+    return (int)pegaPorDelante((long) numeroIntroducido, pegaDelante);
   }
   
    /**
@@ -248,11 +341,23 @@ public class Varios {
    * @param fin posicion final del número introducido).
    * @return  El número restante.
    */
-  public static int trozoDeNumero(int numeroIntroducido, int inicio, int fin) {
+  public static long trozoDeNumero(long numeroIntroducido, int inicio, int fin) {
     int numDigitos = digitos(numeroIntroducido);
     numeroIntroducido = quitaPorDelante(numeroIntroducido, inicio);
     numeroIntroducido = quitaPorDetras(numeroIntroducido, numDigitos - fin - 1);
     return numeroIntroducido;
+  }
+  
+     /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param inicio posicion inicial del número introducido).
+   * @param fin posicion final del número introducido).
+   * @return  El número restante.
+   */
+  public static int trozoDeNumero(int numeroIntroducido, int inicio, int fin) {
+    return (int)trozoDeNumero((long) numeroIntroducido, inicio, fin);
   }
   
   /**
@@ -262,8 +367,41 @@ public class Varios {
    * @param pegaNumero otro número entero introducido para pegarlo al anterior.
    * @return  El número juntado.
    */
+  public static long juntaNumeros(long pegaNumero, long numeroIntroducido) {
+    return pegaPorDelante(numeroIntroducido, (int)pegaNumero);
+  }
+  
+    /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaNumero otro número entero introducido para pegarlo al anterior.
+   * @return  El número juntado.
+   */
   public static int juntaNumeros(int pegaNumero, int numeroIntroducido) {
-    return pegaPorDelante(numeroIntroducido, pegaNumero);
+    return (int)juntaNumeros((long) pegaNumero, (long) numeroIntroducido);
+  }
+  
+    /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaNumero otro número entero introducido para pegarlo al anterior.
+   * @return  El número juntado.
+   */
+  public static long juntaNumeros(long pegaNumero, int numeroIntroducido) {
+    return juntaNumeros((long) pegaNumero, numeroIntroducido);
+  }
+  
+   /**
+   * Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente.
+   * 
+   * @param numeroIntroducido un número entero positivo.
+   * @param pegaNumero otro número entero introducido para pegarlo al anterior.
+   * @return  El número juntado.
+   */
+  public static long juntaNumeros(int pegaNumero, long numeroIntroducido) {
+    return juntaNumeros(pegaNumero, (long) numeroIntroducido);
   }
   
   /**
@@ -272,14 +410,14 @@ public class Varios {
    * @param numeroIntroducido un número binario compuesto por ceros y unos.
    * @return  el número en decimal.
    */
-  public static int bin2Dec(int numeroIntroducido) {
+  public static long bin2Dec(long numeroIntroducido) {
     
     int exponente = 1;
     int base = 2;
     int numDigitos = digitos(numeroIntroducido);
     int numeroDecimal = 0;
     
-    int numeroIntroducidoVolteado = volteado(numeroIntroducido * (10) + 7);//multiplico por 10 y le sumo un numero para que al voltearlo no me de error por si acaba en 0.
+    long numeroIntroducidoVolteado = volteado(numeroIntroducido * (10) + 7);//multiplico por 10 y le sumo un numero para que al voltearlo no me de error por si acaba en 0.
     
     while (numDigitos != 0){
       
@@ -288,6 +426,39 @@ public class Varios {
       numDigitos--;
     }
     return (numeroDecimal);
+  }
+  
+    /**
+   * Convierte un número binario en decimal.
+   * 
+   * @param numeroIntroducido un número binario compuesto por ceros y unos.
+   * @return  el número en decimal.
+   */
+  public static int bin2Dec(int numeroIntroducido) {
+    return (int)bin2Dec((long) numeroIntroducido);
+  }
+  
+      /**
+   * Convierte un número decimal en binario.
+   * 
+   * @param numeroIntroducido un número en base decimal.
+   * @return  el número en binario.
+   */
+  public static long dec2Bin(long numeroIntroducido) {
+    
+    long binario = 8;
+    
+    while(numeroIntroducido > 1) {
+      binario = pegaPorDetras(binario, (int)(numeroIntroducido % 2));
+      numeroIntroducido /= 2;
+    }
+    binario = pegaPorDetras(binario,1);
+    long volteadoBinario = volteado(binario);
+    return quitaPorDetras(volteadoBinario,1);
+  }
+  
+    public static int dec2Bin(int numeroIntroducido) {
+    return (int)dec2Bin((long) numeroIntroducido);
   }
   
   
