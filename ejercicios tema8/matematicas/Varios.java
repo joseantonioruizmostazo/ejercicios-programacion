@@ -270,10 +270,11 @@ public class Varios {
    * @return  El número restante.
    */
   public static long quitaPorDelante(long numeroIntroducido, int quitaDelante) {
-    
+    numeroIntroducido = pegaPorDetras(numeroIntroducido, 8);
     numeroIntroducido = volteado(numeroIntroducido);
     long quitaVolteado = quitaPorDetras(numeroIntroducido, quitaDelante);
-    return volteado(quitaVolteado);
+    long normal = volteado(quitaVolteado);
+    return normal = quitaPorDetras(normal,1);
   }
   
   /**
@@ -412,20 +413,17 @@ public class Varios {
    */
   public static long bin2Dec(long numeroIntroducido) {
     
-    int exponente = 1;
-    int base = 2;
-    int numDigitos = digitos(numeroIntroducido);
-    int numeroDecimal = 0;
+    long copia = numeroIntroducido;
+    long numeroDecimal = 0;
+    long resto = 0;
     
-    long numeroIntroducidoVolteado = volteado(numeroIntroducido * (10) + 7);//multiplico por 10 y le sumo un numero para que al voltearlo no me de error por si acaba en 0.
-    
-    while (numDigitos != 0){
+    for (int i = 0; i < digitos(copia); ++i) {
+      resto = numeroIntroducido % 10;
       
-      numeroDecimal += digitoN(numeroIntroducidoVolteado, exponente) * potencia(base, exponente -1);
-      exponente++;
-      numDigitos--;
+      numeroDecimal += ((potencia(2, i)) * resto);
+      numeroIntroducido /= 10;
     }
-    return (numeroDecimal);
+    return numeroDecimal;
   }
   
   /**
@@ -465,5 +463,103 @@ public class Varios {
    */
   public static int dec2Bin(int numeroIntroducido) {
     return (int)dec2Bin((long) numeroIntroducido);
+  }
+
+  /**
+   * Convierte un número binario en octal.
+   * 
+   * @param numeroIntroducido un número binario compuesto por ceros y unos.
+   * @return  el número en octal.
+   */
+  public static long bin2Oct(long numeroIntroducido) {
+    int numeroOctal = 9;
+    int numDigitos = digitos(numeroIntroducido);
+    int trozos = 0;
+    int trio = 0;
+    int copiaTrozos = 0;
+    
+    if (numDigitos % 3 == 0) {
+      trozos = numDigitos /3;
+    } else {
+      trozos = (numDigitos /3) + 1;
+      copiaTrozos = trozos;
+    }
+    
+    for (int i = 0; i < trozos; i++) {
+      if (copiaTrozos > 1) {
+        
+        trio = (int)trozoDeNumero(numeroIntroducido, digitos(numeroIntroducido) -3, digitos(numeroIntroducido) - 1);
+        numeroIntroducido = trozoDeNumero(numeroIntroducido, 0, digitos(numeroIntroducido) -4);
+        int digitoDecimal = bin2Dec(trio);
+        numeroOctal = pegaPorDetras(numeroOctal,digitoDecimal);
+      } else {
+        numeroOctal = pegaPorDetras(numeroOctal,bin2Dec((int)numeroIntroducido));
+      }
+      copiaTrozos--;
+    }
+    numeroOctal = volteado(numeroOctal);
+    numeroOctal = quitaPorDetras(numeroOctal,1);
+    return numeroOctal;
+  }
+  
+  /**
+   * Convierte un número binario en hexadecimal.
+   * 
+   * @param numeroIntroducido un número binario compuesto por ceros y unos.
+   * @return  el número en hexadecimal.
+   */
+  public static String bin2Hex(long numeroIntroducido) {
+    long numeroIntroducidoDecimal = bin2Dec(numeroIntroducido);
+    int resto = 0;
+    String [] digitoHexa = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F",};
+    String hexadecimal = "";
+    String numeroFinal = "";
+    int i = 0;
+    while (numeroIntroducidoDecimal > 0) {
+      resto = (int)numeroIntroducidoDecimal % 16;
+      while (i < resto) {
+        ++i;
+      }
+      hexadecimal += digitoHexa[i];
+      numeroIntroducidoDecimal /= 16;
+      i = 0;
+    }
+    for (int j = hexadecimal.length() - 1; j>=0; --j) {
+      numeroFinal = numeroFinal + hexadecimal.charAt(j);
+    }
+    return numeroFinal;
+  }
+  
+  /**
+   * Convierte un número hexadecimal en binario.
+   * 
+   * @param numeroIntroducido un número hexadecimal compuesto por una cadena de 0 a F.
+   * @return  el número en binario.
+   */
+  public static long hex2Bin(String numeroIntroducido) {
+    
+    String digitosHexa = "0123456789ABCDEF";
+    long binario = 0;
+    
+    for (int i = 0; i < numeroIntroducido.length(); i++) {
+      binario = binario * 10000 + dec2Bin(digitosHexa.indexOf(numeroIntroducido.charAt(i)));
+    }
+    return binario;
+  }
+  
+  /**
+   * Convierte un número octal en binario.
+   * 
+   * @param numeroIntroducido un número en base 8.
+   * @return  el número en binario.
+   */
+  public static long oct2Bin(long numeroIntroducido) {
+    
+    long binario = 0;
+    
+    for (int i = 0; i < digitos(numeroIntroducido); i++) {
+      binario = binario * 1000 + dec2Bin((digitoN(numeroIntroducido,i)));
+    }
+    return binario;
   }
 }
