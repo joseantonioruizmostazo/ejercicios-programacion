@@ -562,4 +562,29 @@ public class Varios {
     }
     return binario;
   }
+  
+  /**
+ * Esta función convierte el número n al sistema de palotes
+ * y lo devuelve en una cadena de caracteres
+ * 
+ * 
+ * @param n el número que se pasa a palotes.
+ * @return Devuelve un string del numero que se pasa a palotes.
+ */
+  public static String convierteEnPalotes(int n) {
+    String palotes = "";
+    n = Varios.volteado(n);
+    int resto = 0;
+    while (n > 0) {
+      resto = n % 10;
+      for (int i = 0; i < resto; i++) {
+        palotes += "|";
+      }
+      n /= 10;
+      palotes += "-";
+    }
+    palotes = palotes.substring(0, palotes.length() - 1);
+    return palotes;
+  }
+  
 }
