@@ -69,7 +69,7 @@ public class ArraysUniDim {
   }
   
   /**
-   * Devuelve el valor máximo del array que se pasa como parámetro.
+   * Devuelve la media del array que se pasa como parámetro.
    * 
    * @param x array de números enteros
    * @return  valor máximo del array
