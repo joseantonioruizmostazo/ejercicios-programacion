@@ -5,7 +5,7 @@
  */
 
 package ejercicios.tema8.arrays;
-
+import ejercicios.tema8.matematicas.Varios;
 public class ArraysUniDim {
   
   
@@ -210,5 +210,31 @@ public class ArraysUniDim {
       }
       return auxiliar;
     }
+  }
+  
+/**
+ * Devuelve un array con todos los números primos que
+ * se encuentren en otro array
+ * 
+ * @param x un array del que queremos buscar los números primos
+ * @return Devuelve un array formado solo con los números primos del array pasado por parámetro
+ */
+  public static int[] filtraPrimos(int x[]) {
+    int contador = 0;
+    int [] primoAux = new int [1000];
+    for (int i = 0; i < x.length; i++) {
+      if (Varios.esPrimo(x[i])) {
+        primoAux[contador] = x[i];
+        ++contador;
+      }
+    }
+    if (contador == 0) {
+      primoAux[0] = -1;
+    }
+    int [] primo = new int [contador];
+    for (int j = 0; j < contador; j++) {
+      primo[j] = primoAux[j];
+    }  
+    return primo;
   }
 }
