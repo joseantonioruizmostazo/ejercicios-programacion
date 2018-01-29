@@ -271,5 +271,46 @@ public class ArraysUniDim {
       capicua[j] = capicuaAux[j];
     }
     return capicua;
-  }  
+  } 
+  
+/**
+ * Devuelve un array con todos los números que contengan un 7 que se encuentren en otro array
+ * 
+ * @param x un array del que queremos buscar los números que contengan un 7
+ * @return Devuelve un array formado solo con los números que contienen el número 7 del array pasado por parámetro
+ */
+  public static int[] filtraCon7(int x[]) {
+    int contador = 0;
+    int sietes = 0;
+    int resto = 0;
+    int [] conSieteAux = new int [1000];
+    for (int i = 0; i < x.length; i++) {
+      resto = x[i];
+      if (resto % 10 == 7) {
+        conSieteAux[contador] = x[i];
+        ++contador;
+        sietes++;
+      } else {
+        resto /= 10;
+        if (resto % 10 == 7) {
+          conSieteAux[contador] = x[i];
+          ++contador;
+          sietes++;
+        }
+        
+      }
+    }
+    if (sietes == 0) {
+      contador += 1;
+      conSieteAux[0] = -1;
+      int [] siete = new int [contador];
+        siete[0] = conSieteAux[0];
+    }
+    int [] siete = new int [contador];
+    for (int j = 0; j < contador; j++) {
+      siete[j] = conSieteAux[j];
+    }
+    return siete;
+  }
+  
 }
