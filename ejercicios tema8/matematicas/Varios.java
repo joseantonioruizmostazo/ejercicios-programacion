@@ -43,7 +43,6 @@ public class Varios {
    * @return  <code>true</code> si el número es capicúa o <code>false</code> en caso contrario.
    */
   public static boolean esCapicua(long n) {
-    
     return (volteado(n) == n);
   }
   
@@ -563,12 +562,12 @@ public class Varios {
     return binario;
   }
   
-  /**
+/**
  * Esta función convierte el número n al sistema de palotes
  * y lo devuelve en una cadena de caracteres
  * 
  * 
- * @param n el número que se pasa a palotes.
+ * @param n numero entero positivo.
  * @return Devuelve un string del numero que se pasa a palotes.
  */
   public static String convierteEnPalotes(int n) {
@@ -585,6 +584,27 @@ public class Varios {
     }
     palotes = palotes.substring(0, palotes.length() - 1);
     return palotes;
+  }
+    
+/**
+ * Esta función convierte el número n a código morse
+ * y lo devuelve en una cadena de caracteres
+ * 
+ * @param n numero entero positivo.
+ * @return Devuelve un string del numero que se pasa a código morse.
+ */
+  public static String convierteEnMorse(int n) {
+    String [] morse = {" _ _ _ _ _", " . _ _ _ _", " . . _ _ _", " . . . _ _", " . . . . _", " . . . . .", " _ . . . .", " _ _ . . .", " _ _ _ . .", " _ _ _ _ ."};
+    String codigo = "";
+    int resto = 0;
+    n = Varios.pegaPorDetras(n, 8);
+    n = Varios.volteado(n);
+    while (n >= 10) {
+      resto = (int)n % 10;
+      codigo += morse[resto];
+      n /= 10;
+    }
+    return codigo;
   }
   
 }
