@@ -242,4 +242,34 @@ public class ArraysUniDim {
     }
     return primo;
   }
+  
+/**
+ * Devuelve un array con todos los números capicua que se encuentren en otro array
+ * 
+ * @param x un array del que queremos buscar los números capicua
+ * @return Devuelve un array formado solo con los números capicua del array pasado por parámetro
+ */
+  public static int[] filtraCapicuas(int x[]) {
+    int contador = 0;
+    int capicuas = 0;
+    int [] capicuaAux = new int [1000];
+    for (int i = 0; i < x.length; i++) {
+      if (Varios.esCapicua(x[i])) {
+        capicuaAux[contador] = x[i];
+        ++contador;
+        capicuas++;
+      }
+    }
+    if (capicuas == 0) {
+      contador += 1;
+      capicuaAux[0] = -1;
+      int [] capicua = new int [contador];
+        capicua[0] = capicuaAux[0];
+    }
+    int [] capicua = new int [contador];
+    for (int j = 0; j < contador; j++) {
+      capicua[j] = capicuaAux[j];
+    }
+    return capicua;
+  }  
 }
