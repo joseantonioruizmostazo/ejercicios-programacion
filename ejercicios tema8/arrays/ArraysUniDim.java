@@ -281,36 +281,27 @@ public class ArraysUniDim {
  */
   public static int[] filtraCon7(int x[]) {
     int contador = 0;
-    int sietes = 0;
-    int resto = 0;
-    int [] conSieteAux = new int [1000];
+    
+    //cuenta la cantidad de números que contienen el digito 7.
     for (int i = 0; i < x.length; i++) {
-      resto = x[i];
-      if (resto % 10 == 7) {
-        conSieteAux[contador] = x[i];
-        ++contador;
-        sietes++;
-      } else {
-        resto /= 10;
-        if (resto % 10 == 7) {
-          conSieteAux[contador] = x[i];
-          ++contador;
-          sietes++;
-        }
-        
-      }
+      if(Varios.contieneDigito(x[i], 7)) {
+       contador++;
+      } 
     }
-    if (sietes == 0) {
-      contador += 1;
-      conSieteAux[0] = -1;
-      int [] siete = new int [contador];
-        siete[0] = conSieteAux[0];
+    //Si el contador es 0, devuelve un array con el valor -1
+    if (contador == 0) {
+      int [] resultado = {-1};
+      return resultado;
     }
     int [] siete = new int [contador];
-    for (int j = 0; j < contador; j++) {
-      siete[j] = conSieteAux[j];
+     
+    contador = 0;
+    for (int i = 0; i < x.length; i++) {
+      if (Varios.contieneDigito(x[i], 7)) {
+        siete[contador] = x[i];
+        contador++;
+      }
     }
     return siete;
   }
-  
 }

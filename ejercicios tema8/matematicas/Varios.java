@@ -627,5 +627,13 @@ public class Varios {
     return codigo;
   }
   
-  
+/**
+ * Esta función dice si un digito se encuentra en un número
+ * 
+ * @param numero numero entero positivo.
+ * @return Devuelve true o false si el digito se encuentra o no en el numero.
+ */
+  public static boolean contieneDigito(int numero, int digito) {
+    return posicionDeDigito(numero, digito) >= 0;
+  }
 }
