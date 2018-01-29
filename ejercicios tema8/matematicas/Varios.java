@@ -607,4 +607,25 @@ public class Varios {
     return codigo;
   }
   
+/**
+ * Esta función convierte el número n a palabras y lo devuelve en una cadena de caracteres
+ * 
+ * @param n numero entero positivo.
+ * @return Devuelve un string del numero que se pasa a palabras.
+ */
+  public static String convierteEnPalabras(int n) {
+    String [] palabras = {" cero,", " uno,", " dos,", " tres,", " cuatro,", " cinco,", " seis,", " siete,", " ocho,", " nueve,"};
+    String codigo = "";
+    int resto = 0;
+    n = Varios.pegaPorDetras(n, 8);
+    n = Varios.volteado(n);
+    while (n >= 10) {
+      resto = (int)n % 10;
+      codigo += palabras[resto];
+      n /= 10;
+    }
+    return codigo;
+  }
+  
+  
 }
