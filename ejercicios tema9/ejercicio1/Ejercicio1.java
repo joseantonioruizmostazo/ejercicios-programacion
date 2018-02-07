@@ -7,7 +7,7 @@
  * @author José Ruiz
  */
 
-package ejercicios.tema9;
+package ejercicios.tema9.ejercicio1;
 
 public class Ejercicio1 {
 
@@ -37,10 +37,15 @@ public class Ejercicio1 {
     rapida.corre();
     
     System.out.println("¡Van a nacer nuevos potrillos!");
-    perdigon.seApareaCon(rocinante, "lola", "pepe");
-    rocinante.seApareaCon(bella, "flora", "speedy");
-    bella.seApareaCon(perdigon, "lolita", "veloz");
-    rapida.seApareaCon(bella, "josefa", "juan");
+    Caballo caballo1 = perdigon.seApareaCon(rocinante, "lola", "pepe");
+    Caballo caballo2 = rocinante.seApareaCon(bella, "flora", "speedy");
+    Caballo caballo3 = bella.seApareaCon(perdigon, "lolita", "veloz");
+    Caballo caballo4 = rapida.seApareaCon(bella, "josefa", "juan");
+    
+    System.out.println(caballo1);
+    System.out.println(caballo2);
+    System.out.println(caballo3);
+    System.out.println(caballo4);
     
     
     

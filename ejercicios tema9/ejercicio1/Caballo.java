@@ -3,7 +3,7 @@
  * Definición de la clase Caballo
  * @author José Ruiz
  */
-package ejercicios.tema9;
+package ejercicios.tema9.ejercicio1;
 
 public class Caballo {
   
@@ -34,11 +34,14 @@ public class Caballo {
   Caballo () {
     this.sexo = "sin sexo definido";
   }
-   Caballo (String sex, String nom, String raz, String col) {
+   Caballo (String sex, String nom, String raz, String col, double pes) {
     this.sexo = sex;
     this.nombre = nom;
     this.raza = raz;
     this.color = col;
+    this.peso = pes;
+    this.edad = 0;
+    this.uso = "Sin uso definido";
   }
   
   //getter
@@ -66,8 +69,12 @@ public class Caballo {
   public int getEdad() {
     return this.edad;
   }
+
+  @Override
+  public String toString() {
+    return "Caballo{" + "nombre=" + nombre + ", raza=" + raza + ", sexo=" + sexo + ", color=" + color + ", uso=" + uso + ", edad=" + edad + ", peso=" + peso + '}';
+  }
   
-   
   /**
    * Hace que el caballo relinche
    */
@@ -116,6 +123,7 @@ public class Caballo {
       String nuevoNombre = "";
       String nuevaRaza = "";
       String nuevoColor = "";
+      double nuevoPeso = 0;
       
       //random para el sexo y el nombre
       if ((int)(Math.random()* 2) == 0) {
@@ -133,20 +141,22 @@ public class Caballo {
         nuevaRaza = pareja.raza;
       }
       
-       //random para el color
+      //random para el color
       if ((int)(Math.random()* 2) == 0) {
         nuevoColor = this.color;
       } else {
         nuevoColor = pareja.color;
       }
       
-      Caballo potrillo = new Caballo(nuevoSexo, nuevoNombre, nuevaRaza, nuevoColor);
+      //random para el peso
+      nuevoPeso = ((int)(Math.random()* 100) + 50);
+      
+      Caballo potrillo = new Caballo(nuevoSexo, nuevoNombre, nuevaRaza, nuevoColor, nuevoPeso);
       
       return potrillo;
     } else {
       System.out.println("Lo siento, no podemos aparearnos porque somos del mismo sexo.");
+      return null;
     }
-    return null;
   } 
-  
 }
