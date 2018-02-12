@@ -21,7 +21,7 @@ public class Caballo {
   
   // constructor
   
-    //nombre, raza, sexo, color, uso, edad, peso
+  //nombre, raza, sexo, color, uso, edad, peso
   Caballo (String nom, String raz, String sex, String col, String  us, int eda, double pes) {
     this.nombre = nom;
     this.raza = raz;
@@ -78,21 +78,21 @@ public class Caballo {
   /**
    * Hace que el caballo relinche
    */
-  void relincha() {
+  public void relincha() {
     System.out.println("hhiiijjjij");
   }
   
   /**
    * Hace que el caballo cabalgue
    */
-  void cabalga() {
+  public void cabalga() {
     System.out.println("tucu tu tucu tu tucu tu");
   }
   
   /**
    * Hace que el caballo corra
    */
-  void corre() {
+  public void corre() {
     System.out.println("tocotó tocotó tocotó tocotó");
   }
   
@@ -103,7 +103,7 @@ public class Caballo {
    * 
    * @param comida la comida que se le ofrece al caballo
    */
-  void come(String comida) {
+  public void come(String comida) {
     if (comida.equals("hamburguesa")) {
       System.out.println("Hmmmm, gracias, con bacon y cebolla caramelizada, mis favoritas! :D");
     } else {

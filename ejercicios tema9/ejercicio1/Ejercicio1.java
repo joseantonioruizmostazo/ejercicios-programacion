@@ -46,10 +46,5 @@ public class Ejercicio1 {
     System.out.println(caballo2);
     System.out.println(caballo3);
     System.out.println(caballo4);
-    
-    
-    
-    
-    
   }
 }
