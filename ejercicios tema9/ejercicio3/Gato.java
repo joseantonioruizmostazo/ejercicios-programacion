@@ -6,6 +6,8 @@
 package ejercicios.tema9.ejercicio3;
 
 public class Gato extends Mamifero {
+  //atributos de instancia //////////////
+  private String raza;
   // metodos de instancia ///////////////
   
   // constructor ////////////////////////
@@ -15,6 +17,13 @@ public class Gato extends Mamifero {
 
   public Gato() {
     super();
+  }
+  
+  public Gato(Sexo s, String raza) {
+    super(s);
+    this.raza = raza;
+    
+    
   }
   
   /**

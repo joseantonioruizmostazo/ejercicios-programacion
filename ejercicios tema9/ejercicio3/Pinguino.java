@@ -27,6 +27,7 @@ public class Pinguino extends Ave {
   /**
    * Hace que el pinguino se ponga triste porque no puede volar
    */
+  @Override
   public void vuela() {
     System.out.println("Aunque soy considerada un ave, por desgracia no puedo volar");
   }
