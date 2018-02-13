@@ -31,12 +31,5 @@ public class Ejercicio4 {
     System.out.println("Por último vamos a simplificar la fracción resultante del ejercicio anterior: ");
     Fraccion f4 = f3.seSimplifica(f3);
     System.out.println(f3 + " simplificada es: " + f4);
-    
-    
-    
-    
-    
-   
-
   }
 }

@@ -90,6 +90,4 @@ public class Fraccion {
     }
     return new Fraccion(num, den);
   }
-  
-  
 }
