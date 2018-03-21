@@ -29,7 +29,7 @@ public class Ex12jarm1 {
   System.out.println(f2);
   System.out.println(f3);
   System.out.println(f4);
-  f2.voltea();
+  System.out.println(f2.voltea());
   System.out.println(f2.encaja(f4));
   System.out.println(f1.encaja(f4));
   System.out.println(f1.encaja(f3));

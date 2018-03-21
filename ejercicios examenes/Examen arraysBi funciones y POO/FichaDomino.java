@@ -1,5 +1,5 @@
 /**
- * Definición de la clase Zona
+ * Definición de la clase FichaDomino
  *
  * @author José Ruiz
  */
@@ -53,12 +53,9 @@ public class FichaDomino {
    * Hace que la ficha se voltee
    */
   public FichaDomino voltea() {
-    int izq = ladoDerecho;
-    int der = ladoIzquierdo;
     
-    FichaDomino f = new FichaDomino(izq, der);
-    System.out.println(f);
-    return null;
+    FichaDomino volteada = new FichaDomino(this.ladoDerecho, this.ladoIzquierdo);
+    return volteada;
   }
   
   /**
