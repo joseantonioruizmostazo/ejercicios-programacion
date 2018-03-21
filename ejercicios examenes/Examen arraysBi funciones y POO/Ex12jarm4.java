@@ -3,16 +3,14 @@
  * José Antonio Ruiz Mostazo
  * 19/02/18
  * 
- * Ejercicio 3
+ * Ejercicio 4
  * 
- * Realiza una función que tome como parámetro un array de cadenas de caracteres y que devuelva otro
- * array con los mismos valores habiendo eliminado las posibles repeticiones. Se distinguen mayúsculas
- * de minúsculas, por tanto "hola" es distinto de "Hola". Por ejemplo, si el array a contiene los valores
- * {"casa", "coche", "sol", "mesa", "mesa", "coche", "ordenador", "sol", "CASA"}, la sentencia
- * sinRepetir(a) devolvería el array {"casa", "coche", "sol", "mesa", "ordenador", "CASA"}. Se
- * debe entregar tanto el código de la función como el código de prueba que la usa. La cabecera de la
- * función es la siguiente:
- * public static String[] sinRepetir(String[] s)
+ * Implementa una función con nombre corteza que sea capaz de extraer la capa exterior de un array
+ * bidimensional. Esta capa se extrae en forma de array de una dimensión. La extracción de números
+ * comienza en la esquina superior izquierda y continúa en el sentido de las agujas del reloj. Se debe
+ * entregar tanto el código de la función como el código de prueba que la usa. La cabecera de la función
+ * es la siguiente:
+ * public static int[] corteza(int[][] n)
  * 
  * @author José Ruiz
  * 
